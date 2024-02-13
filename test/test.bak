@@ -1,0 +1,22 @@
+const chai = require('chai');
+const expect = chai.expect;
+
+const { calculateFactorial } = require('../webapp/script');
+
+describe('Factorial Calculator', () => {
+  it('should calculate the factorial of 0 correctly', () => {
+    const result = calculateFactorial(0);
+    expect(result).to.equal(1);
+  });
+
+  it('should calculate the factorial of 5 correctly', () => {
+    const result = calculateFactorial(5);
+    expect(result).to.equal(120);
+  });
+
+  it('should handle invalid input (non-numbers)', () => {
+    const result = calculateFactorial('hello');
+    expect(result).to.be.NaN;
+  });
+});
+
