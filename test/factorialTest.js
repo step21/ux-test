@@ -1,6 +1,4 @@
-//const { Builder, By, Key } = require('selenium-webdriver');
 const { expect } = require('chai');
-//const firefox = require('selenium-webdriver/firefox')
 
 describe('Factorial Calculator Test', function() {
 
