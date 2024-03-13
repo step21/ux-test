@@ -21,7 +21,8 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/specs/**/*.js'
+        './test/specs/**/*.js',
+        './test/factorialTest.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -50,7 +51,9 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
+        maxInstances: 5,
         browserName: 'firefox',
+        acceptInsecureCerts: true,
         'moz:firefoxOptions': {
             args: ['-headless']
         }

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start2": "node server2.js",
-    "test": "mocha",
+    "test": "wdio wdio.conf.js",
     "serve-and-test": "concurrently --kill-others \"npm start\" \"sleep 5 && npm run start2\"  \"sleep 5 && npm test\"",
     "wdio": "wdio run ./wdio.conf.js"
   },
